@@ -19,15 +19,14 @@
       <input type="text" id="searchInput" placeholder="搜索扩展">
     </div>
   </header>
-  <button id="darkModeToggle" class="darkModeToggle" title="切换颜色"></button>
   <main id="extensionContainer">
     <div class="extension" data-tags="工具">
       <img src="./extensions/inline/main.svg" alt="Inline">
       <span class="extension-name">内联</span>
       <p>使用内联块，在文字框中执行命令。</p>
       <div class="overlay">
-        <span class="tooltip" data-copy="https://ext.40code.com/extensions/inline/main.js">复制扩展</span>
-        <span class="tooltip" start="./extensions/inline/main.js"id="openExtension">启动</span>
+        <span class="tooltip" data-copy="/extensions/inline/main.js">复制扩展</span>
+        <span class="tooltip" start="/extensions/inline/main.js"id="openExtension">启动</span>
       </div>
     </div>
     <div class="extension" data-tags="设计">
@@ -35,12 +34,19 @@
       <span class="extension-name">网页构建</span>
       <p>一个可以使用积木进行网站开发的强大扩展，直接在舞台进行预览，并支持导出代码。</p>
       <div class="overlay">
-        <span class="tooltip" data-copy="https://ext.40code.com/extensions/kernel/main.js">复制扩展</span>
-        <span class="tooltip" start="./extensions/kernel/main.js"id="openExtension">打开页面</span>
+        <span class="tooltip" data-copy="/extensions/kernel/main.js">复制扩展</span>
+        <span class="tooltip" start="/extensions/kernel/main.js"id="openExtension">打开页面</span>
       </div>
     </div>
     <!-- 其他扩展项 -->
   </main>
   <script src="script.js"></script>
 </body>
+<footer>
+  <div class="footer-buttons">
+    <button id="darkModeToggle" class="footer-button">暗黑模式</button>
+    <button id="addToggle" class="footer-button">提交你的扩展</button>
+  </div>
+</footer>
+
 </html>

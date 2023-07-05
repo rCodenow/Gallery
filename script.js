@@ -5,49 +5,55 @@ if (prefersDarkMode) {
     document.body.classList.toggle('dark-mode');
 }
 document.addEventListener('DOMContentLoaded', function () {
-    
+
     const openExtensionBtn = document.getElementById('openExtension');
 
     if (window.opener) {
-      openExtensionBtn.textContent = '添加扩展';
+        openExtensionBtn.textContent = '添加扩展';
     } else {
-      openExtensionBtn.textContent = '打开页面';
+        openExtensionBtn.textContent = '打开页面';
     }
 
     const copyButtons = document.querySelectorAll('[data-copy]');
 
     copyButtons.forEach(button => {
-      button.addEventListener('click', function() {
-        const filePath = this.getAttribute('data-copy');
-  
-        navigator.clipboard.writeText(filePath)
-          .then(() => {
-            alert('已复制文件链接到剪贴板！');
-          })
-          .catch(error => {
-            console.error('复制文件链接失败:', error);
-          });
-      });
+        button.addEventListener('click', function () {
+            const filePath = window.location.href + this.getAttribute('data-copy');
+
+            navigator.clipboard.writeText(filePath)
+                .then(() => {
+                    alert('已复制文件链接到剪贴板！');
+                })
+                .catch(error => {
+                    console.error('复制文件链接失败:', error);
+                });
+        });
     });
-    
+
     const openNewButtons = document.querySelectorAll('[start]');
 
     openNewButtons.forEach(button => {
-      button.addEventListener('click', function() {
-        const filePath = this.getAttribute('start');
-        const fileLink = document.createElement('a');
-        fileLink.href = filePath;
-        fileLink.target = '_blank';
-        document.body.appendChild(fileLink);
-        fileLink.click();
-        document.body.removeChild(fileLink);
-      });
+        button.addEventListener('click', function () {
+            const filePath = this.getAttribute('start');
+            const fileLink = document.createElement('a');
+            fileLink.href = 'http://rc.40code.com/editor?extension=' +  window.location.href + filePath;
+            fileLink.target = '_blank';
+            document.body.appendChild(fileLink);
+            fileLink.click();
+            document.body.removeChild(fileLink);
+        });
     });
-    
+
     const darkModeToggle = document.getElementById('darkModeToggle');
 
-    darkModeToggle.addEventListener('click', function() {
-      document.body.classList.toggle('dark-mode');
+    darkModeToggle.addEventListener('click', function () {
+        document.body.classList.toggle('dark-mode');
+    });
+
+    const addToggle = document.getElementById('addToggle');
+
+    addToggle.addEventListener('click', function () {
+        window.open('https://github.com/rCodenow/Gallery/pull')
     });
     // 获取所有标签元素
     const tags = document.querySelectorAll('.tag');

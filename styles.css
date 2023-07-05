@@ -26,9 +26,12 @@ header {
 h1 {
   margin: 0;
 }
-
 .tags {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  margin-left: 40px;
 }
 
 .tag {
@@ -48,18 +51,18 @@ h1 {
 }
 
 .tag.active {
-  background-color: #007bff;
+  background-color: #609834;
   color: #fff;
 }
 
 #searchInput {
   padding: 6px 10px;
-  margin-left: 10px;
+  margin-left: auto;
 }
 
 .dark-mode #searchInput {
   padding: 6px 10px;
-  margin-left: 10px;
+  margin-left: auto;
   background-color: #333333; /* 暗黑模式下的背景色 */
   color: #ffffff; /* 暗黑模式下的文本颜色 */
 }
@@ -123,7 +126,7 @@ h1 {
 }
 
 .tooltip:hover {
-  background-color: #007bff;
+  background-color: #609834;
   color: #fff;
 }
 
@@ -134,7 +137,7 @@ h1 {
   left: 0;
   width: 100%;
   height: 3px;
-  background-color: #007bff;
+  background-color: #609834;
   transition: transform 0.3s ease;
   transform: scaleX(0);
 }
@@ -171,7 +174,7 @@ h1 {
 
 .extension-name {
   font-weight: bold;
-  color: #007bff;
+  color: #609834;
   /* 例如，使用蓝色突出显示扩展名称 */
   font-size: 18px;
   /* 例如，调整字体大小 */
@@ -179,16 +182,13 @@ h1 {
 
 #darkModeToggle {
   cursor: pointer;
-  color: #007bff;
-  /* 设置图标的默认颜色 */
-  font-size: 20px;
-  /* 设置图标的大小 */
+  color: #fff;
   transition: color 0.3s ease;
   /* 添加过渡效果 */
 }
 
 .dark-mode #darkModeToggle {
-  color: #fff;
+  color: #609834;
   /* 设置暗黑模式下图标的颜色 */
 }
 
@@ -206,4 +206,53 @@ h1 {
   /* 设置暗黑模式下的背景色 */
   color: #ffffff;
   /* 设置暗黑模式下的文本颜色 */
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f0f0f0;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.dark-mode footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #313131;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.footer-buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.footer-button {
+  margin: 0 10px;
+  padding: 8px 16px;
+  border: none;
+  background-color: #ccc;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.dark-mode .footer-button {
+  margin: 0 10px;
+  padding: 8px 16px;
+  border: none;
+  background-color: #292929;
+  color: #f1f1f1;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.footer-button:hover {
+  background-color: #999;
 }
