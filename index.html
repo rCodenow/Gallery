@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="shortcut icon" href="favicon.ico">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>扩展仓库</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="header-top">
+      <h1>扩展仓库</h1>
+      <div class="tags">
+        <span class="tag active" data-tag="所有">所有</span>
+        <span class="tag" data-tag="工具">工具</span>
+        <span class="tag" data-tag="设计">设计</span>
+      </div>
+      <input type="text" id="searchInput" placeholder="搜索扩展">
+    </div>
+  </header>
+  <button id="darkModeToggle" class="darkModeToggle" title="切换颜色"></button>
+  <main id="extensionContainer">
+    <div class="extension" data-tags="工具">
+      <img src="./extensions/inline/main.svg" alt="Inline">
+      <span class="extension-name">内联</span>
+      <p>使用内联块，在文字框中执行命令。</p>
+      <div class="overlay">
+        <span class="tooltip" data-copy="https://ext.40code.com/extensions/inline/main.js">复制扩展</span>
+        <span class="tooltip" start="./extensions/inline/main.js"id="openExtension">启动</span>
+      </div>
+    </div>
+    <div class="extension" data-tags="设计">
+      <img src="./extensions/kernel/main.svg" alt="Kernel">
+      <span class="extension-name">网页构建</span>
+      <p>一个可以使用积木进行网站开发的强大扩展，直接在舞台进行预览，并支持导出代码。</p>
+      <div class="overlay">
+        <span class="tooltip" data-copy="https://ext.40code.com/extensions/kernel/main.js">复制扩展</span>
+        <span class="tooltip" start="./extensions/kernel/main.js"id="openExtension">打开页面</span>
+      </div>
+    </div>
+    <!-- 其他扩展项 -->
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
