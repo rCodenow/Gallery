@@ -6,6 +6,7 @@ if (prefersDarkMode) {
 }
 document.addEventListener('DOMContentLoaded', function () {
 
+
     const openExtensionBtn = document.getElementById('openExtension');
 
     if (window.opener) {
@@ -36,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function () {
         button.addEventListener('click', function () {
             const filePath = this.getAttribute('start');
             const fileLink = document.createElement('a');
-            fileLink.href = 'http://rc.40code.com/editor?extension=' +  window.location.href + filePath;
+            fileLink.href = 'http://rc.40code.com/editor?extension=' + window.location.href + filePath;
             fileLink.target = '_blank';
             document.body.appendChild(fileLink);
             fileLink.click();
@@ -54,6 +55,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
     addToggle.addEventListener('click', function () {
         window.open('https://github.com/rCodenow/Gallery/pull')
+    });
+
+    const seeToggle = document.getElementById('seeToggle');
+
+    seeToggle.addEventListener('click', function () {
+        window.open('./from.html')
     });
     // 获取所有标签元素
     const tags = document.querySelectorAll('.tag');
