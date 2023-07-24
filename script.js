@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function () {
         button.addEventListener('click', function () {
             const filePath = this.getAttribute('start');
             const fileLink = document.createElement('a');
-            fileLink.href = 'http://rc.40code.com/editor?extension=' + window.location.href + filePath;
+            fileLink.href = 'https://rc.40code.com/editor?extension=' + window.location.href + filePath;
             fileLink.target = '_blank';
             document.body.appendChild(fileLink);
             fileLink.click();
