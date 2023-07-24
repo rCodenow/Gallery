@@ -1,79 +1,98 @@
-<!DOCTYPE html>
-<html lang="en">
-<link rel="shortcut icon" href="favicon.ico">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>扩展仓库</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <header>
-    <div class="header-top">
-      <h1>扩展仓库</h1>
-      <div class="tags">
-        <span class="tag active" data-tag="所有">所有</span>
-        <span class="tag" data-tag="编辑器更改">编辑器更改</span>
-        <span class="tag" data-tag="功能拓展">功能拓展</span>
+  <!DOCTYPE html>
+  <html lang="en">
+  <link rel="shortcut icon" href="favicon.ico">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>扩展仓库</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header>
+      <div class="header-top">
+        <h1>扩展仓库</h1>
+        <div class="tags">
+          <span class="tag active" data-tag="所有">所有</span>
+          <span class="tag" data-tag="编辑器更改">编辑器更改</span>
+          <span class="tag" data-tag="功能拓展">功能拓展</span>
+          <span class="tag" data-tag="ClipCC">ClipCC</span>
+        </div>
+        <input type="text" id="searchInput" placeholder="搜索扩展">
       </div>
-      <input type="text" id="searchInput" placeholder="搜索扩展">
-    </div>
-  </header>
-  <main id="extensionContainer">
-    <div class="extension" data-tags="编辑器更改">
-      <img src="./extensions/inline/main.svg" alt="Inline">
-      <span class="extension-name">内联</span>
-      <p>使用内联块，在文字框中执行命令。</p>
-      <div class="overlay">
-        <span class="tooltip" data-copy="extensions/inline/main.js">复制扩展</span>
-        <span class="tooltip" start="extensions/inline/main.js"id="openExtension">启动</span>
+    </header>
+    <main id="extensionContainer">
+      <div class="extension" data-tags="编辑器更改">
+        <img src="./extensions/inline/main.svg" alt="Inline">
+        <span class="extension-name">内联</span>
+        <p>使用内联块，在文字框中执行命令。</p>
+        <div class="overlay">
+          <span class="tooltip" data-copy="extensions/inline/main.js">复制扩展</span>
+          <span class="tooltip" start="extensions/inline/main.js"id="openExtension">启动</span>
+        </div>
       </div>
-    </div>
-    <div class="extension" data-tags="功能拓展">
-      <img src="./extensions/colorpicker/ColorPicker.svg" alt="ColorPicker">
-      <span class="extension-name">颜色选择器</span>
-      <p>允许您访问系统颜色选择器的扩展。</p>
-      <div class="overlay">
-        <span class="tooltip" data-copy="extensions/colorpicker/main.js">复制扩展</span>
-        <span class="tooltip" start="extensions/colorpicker/main.js"id="openExtension">打开页面</span>
+      <div class="extension" data-tags="功能拓展">
+        <img src="./extensions/colorpicker/ColorPicker.svg" alt="ColorPicker">
+        <span class="extension-name">颜色选择器</span>
+        <p>允许您访问系统颜色选择器的扩展。</p>
+        <div class="overlay">
+          <span class="tooltip" data-copy="extensions/colorpicker/main.js">复制扩展</span>
+          <span class="tooltip" start="extensions/colorpicker/main.js"id="openExtension">打开页面</span>
+        </div>
       </div>
-    </div>
-    <div class="extension" data-tags="编辑器更改">
-      <img src="./extensions/customcss/CustomCSS.svg" alt="customcss">
-      <span class="extension-name">自定义 CSS</span>
-      <p>自定义 CSS 扩展，允许您修改变量和列表显示的 CSS。</p>
-      <div class="overlay">
-        <span class="tooltip" data-copy="extensions/customcss/main.js">复制扩展</span>
-        <span class="tooltip" start="extensions/customcss/main.js"id="openExtension">打开页面</span>
+      <div class="extension" data-tags="编辑器更改">
+        <img src="./extensions/customcss/CustomCSS.svg" alt="customcss">
+        <span class="extension-name">自定义 CSS</span>
+        <p>自定义 CSS 扩展，允许您修改变量和列表显示的 CSS。</p>
+        <div class="overlay">
+          <span class="tooltip" data-copy="extensions/customcss/main.js">复制扩展</span>
+          <span class="tooltip" start="extensions/customcss/main.js"id="openExtension">打开页面</span>
+        </div>
       </div>
-    </div>
-    <div class="extension" data-tags="功能拓展">
-      <img src="./extensions/upload/upload.png" alt="upload">
-      <span class="extension-name">上传</span>
-      <p>将文件上传到云端。</p>
-      <div class="overlay">
-        <span class="tooltip" data-copy="extensions/upload/main.js">复制扩展</span>
-        <span class="tooltip" start="extensions/upload/main.js"id="openExtension">打开页面</span>
+      <div class="extension" data-tags="ClipCC">
+        <img src="./extensions/ohmycatblocks/sinangentoo.ohmycatblocks.png" alt="ohmycatblocks">
+        <span class="extension-name">Oh my Catblocks!</span>
+        <p>猫力驱动</p>
+        <div class="overlay">
+          <span class="tooltip" data-copy="extensions/ohmycatblocks/main.ccx">复制扩展</span>
+          <span class="tooltip" start="extensions/ohmycatblocks/main.ccx"id="openExtension">打开页面</span>
+        </div>
       </div>
+      <div class="extension" data-tags="ClipCC">
+        <img src="./extensions/scratch2ify/89a9f8ff-c5bc-4e3a-bf0c-0f1762bee52f.png" alt="scratch2ify">
+        <span class="extension-name">Scratch2-ify</span>
+        <p>让你的编辑器更像Scratch2！</p>
+        <div class="overlay">
+          <span class="tooltip" data-copy="extensions/scratch2ify/main.ccx">复制扩展</span>
+          <span class="tooltip" start="extensions/scratch2ify/main.ccx"id="openExtension">打开页面</span>
+        </div>
+      </div>
+      <div class="extension" data-tags="ClipCC">
+        <img src="./extensions/console/top.sparrowhe.console.png" alt="console">
+        <span class="extension-name">控制台</span>
+        <p>没用的控制台</p>
+        <div class="overlay">
+          <span class="tooltip" data-copy="extensions/console/main.ccx">复制扩展</span>
+          <span class="tooltip" start="extensions/console/main.ccx"id="openExtension">打开页面</span>
+        </div>
+      </div>
+      <div class="extension" data-tags="ClipCC">
+        <img src="./extensions/greenflag/nhjr.restart_project.png" alt="greenflag">
+        <span class="extension-name">Green flag</span>
+        <p>Restart is as easy as a block.</p>
+        <div class="overlay">
+          <span class="tooltip" data-copy="extensions/greenflag/main.ccx">复制扩展</span>
+          <span class="tooltip" start="extensions/greenflag/main.ccx"id="openExtension">打开页面</span>
+        </div>
+      </div>
+      <!-- 其他扩展项 -->
+    </main>
+    <script src="script.js"></script>
+  </body>
+  <footer>
+    <div class="footer-buttons">
+      <button id="seeToggle" class="footer-button">查看扩展来源</button>
+      <button id="darkModeToggle" class="footer-button">暗黑模式</button>
+      <button id="addToggle" class="footer-button">提交你的扩展</button>
     </div>
-    <div class="extension" data-tags="功能拓展">
-      <img src="./extensions/zip/zip.svg" alt="Zip">
-      <span class="extension-name">Zip</span>
-      <p>压缩至Zip、使用Zip解压！</p>
-      <div class="overlay">
-        <span class="tooltip" data-copy="extensions/zip/main.js">复制扩展</span>
-        <span class="tooltip" start="extensions/zip/main.js"id="openExtension">打开页面</span>
-      </div>  
-    </div>
-    <!-- 其他扩展项 -->
-  </main>
-  <script src="script.js"></script>
-</body>
-<footer>
-  <div class="footer-buttons">
-    <button id="seeToggle" class="footer-button">查看扩展来源</button>
-    <button id="darkModeToggle" class="footer-button">暗黑模式</button>
-    <button id="addToggle" class="footer-button">提交你的扩展</button>
-  </div>
-</footer>
-</html>
+  </footer>
+  </html>
